@@ -1,0 +1,37 @@
+target_ip = "192.168.1.1"
+target_port = 162
+source_ip = "0.0.0.0"
+source_port = 162
+# translation_type might be:
+#   - "none": no conversion is done on the value
+#   - "voltage": the value is converted into an int and multiplied by 100
+#   - "temp": the value is converted into an int and multiplied by 10
+# INPD2
+[[oids]]
+source_oid = ".1.3.6.1.4.1.7616.2.2"
+target_oid = ".1.3.6.1.4.1.100.3.1"
+translation_type = "none"
+
+# INPA1
+[[oids]]
+source_oid = ".1.3.6.1.4.1.7616.3.4"
+target_oid = ".1.3.6.1.4.1.100.4.1"
+translation_type = "voltage"
+
+# INPD1
+[[oids]]
+source_oid = ".1.3.6.1.4.1.7616.2.1"
+target_oid = ".1.3.6.1.4.1.100.5.1"
+translation_type = "none"
+
+# VCC
+[[oids]]
+source_oid = ".1.3.6.1.4.1.7616.3.1"
+target_oid = ".1.3.6.1.4.1.100.9.1"
+translation_type = "voltage"
+
+# T1
+[[oids]]
+source_oid = ".1.3.6.1.4.1.7616.4.1"
+target_oid = ".1.3.6.1.4.1.100.10.1"
+translation_type = "temp"
