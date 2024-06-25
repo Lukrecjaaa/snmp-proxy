@@ -5,6 +5,10 @@ trap_port = 162
 
 proxy_lk_ip = "192.168.1.100" # LAN Kontroler IP
 
+heartbeat_ip = "10.0.3.2"
+heartbeat_community = "IT135CAT-RO"
+heartbeat_interval = 5
+
 # translation_type might be:
 #   - "none": no conversion is done on the value
 #   - "voltage": the value is converted into an int and multiplied by 100
